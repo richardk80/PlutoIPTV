@@ -98,7 +98,7 @@ plutoIPTV.grabJSON(function (err, channels) {
       let name = channel.name;
 
       m3u =
-        m3u + \r\n +
+        m3u + `\r\n` +
 `#EXTINF:0 channel-id="${slug}" tvg-logo="${logo}" group-title="${group}", ${name}
 ${m3uUrl}
 
