@@ -97,8 +97,8 @@ plutoIPTV.grabJSON(function (err, channels) {
       let group = channel.category;
       let name = channel.name;
 
-      m3u8 =
-        m3u8 +
+      m3u =
+        m3u +
         `#EXTM3U` +
 `#EXTINF:0 channel-id="${slug}" tvg-logo="${logo}" group-title="${group}", ${name}
 ${m3uUrl}
@@ -205,5 +205,5 @@ ${m3uUrl}
   console.log('[SUCCESS] Wrote the EPG to epg.xml!');
 
   fs.writeFileSync('playlist.m3u', m3u);
-  console.log('[SUCCESS] Wrote the M3U8 tuner to playlist.m3u!');
+  console.log('[SUCCESS] Wrote the M3U tuner to playlist.m3u!');
 });
